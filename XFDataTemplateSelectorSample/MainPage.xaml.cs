@@ -10,9 +10,18 @@ namespace XFDataTemplateSelectorSample
 {
     public partial class MainPage : ContentPage
     {
+        public List<string> SampleItems { get; set; } = new List<string>()
+        {
+            "Hey there, friend!",
+            "Did you already subscribe?",
+            "Do it now!"
+        };
+
         public MainPage()
         {
             InitializeComponent();
+
+            BindingContext = this;
         }
     }
 }
